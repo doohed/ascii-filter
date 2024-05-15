@@ -13,13 +13,13 @@ This program converts a video file into ASCII art, displaying each frame as ASCI
 1. **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/your_username/ascii-video-converter.git
+    git clone https://github.com/doohed/ascii-filter.git
     ```
 
 2. **Build the Project:**
 
     ```bash
-    cd ascii-video-converter
+    cd ascii-filter
     mkdir build && cd build
     cmake ..
     make
@@ -34,7 +34,7 @@ This program converts a video file into ASCII art, displaying each frame as ASCI
 2. **Run the Program:**
 
     ```bash
-    ./ascii-video-converter
+    ./ascii-filter
     ```
 
     By default, the program will process the `porter.mp4` file. You can change the video file path in the `main()` function if you want to use a different file.
