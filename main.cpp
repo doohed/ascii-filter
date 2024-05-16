@@ -6,22 +6,18 @@
 using namespace std;
 using namespace cv;
 
-// Define the ASCII characters to represent different shades of gray
 const string ASCII_CHARS = " .:-=+!#%@";
 
-// Resize the image to fit the desired width and height while maintaining aspect ratio
 Mat resize_image(Mat image, int new_width = 180, int new_height = 45) {
     Mat resized_image;
     resize(image, resized_image, Size(new_width, new_height));
     return resized_image;
 }
 
-// Convert each pixel to an ASCII character based on its intensity
 char pixel_to_ascii(int pixel_value) {
     return ASCII_CHARS[pixel_value / 32];
 }
 
-// Convert the image to grayscale and then to ASCII
 string image_to_ascii(Mat image) {
     cvtColor(image, image, COLOR_BGR2GRAY);
     string ascii_image;
@@ -34,7 +30,6 @@ string image_to_ascii(Mat image) {
     return ascii_image;
 }
 
-// Process the video frames
 void process_video(string video_path) {
     VideoCapture cap(video_path);
     if (!cap.isOpened()) {
